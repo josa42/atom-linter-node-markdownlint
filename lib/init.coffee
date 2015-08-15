@@ -1,14 +1,14 @@
-LinterHandlebarsProvider = require './markdonwlint-provider'
+LinterHandlebarsProvider = require './markdownlint-provider'
 
 
 module.exports =
 
   activate: ->
-    console.log "activate linter-node markdonwlint" # if atom.inDevMode()
+    console.log "activate linter-node markdownlint" # if atom.inDevMode()
 
     if not atom.packages.getLoadedPackage 'linter'
       atom.notifications.addError """
-        [linter-node markdonwlint] `linter` package not found, please install it.
+        [linter-node markdownlint] `linter` package not found, please install it.
       """
 
   provideLinter: -> LinterHandlebarsProvider
