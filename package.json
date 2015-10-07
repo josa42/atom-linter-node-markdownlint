@@ -12,6 +12,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "atom-package-deps": "^2.1.3",
     "markdownlint": "0.0.7"
   },
   "package-deps": [
