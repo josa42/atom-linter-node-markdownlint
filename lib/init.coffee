@@ -6,6 +6,6 @@ module.exports =
   activate: ->
     console.log "activate linter-node markdownlint" if atom.inDevMode()
 
-    packageDeps.install 'linter-node markdownlint'
+    packageDeps.install 'linter-node-markdownlint'
 
   provideLinter: -> LinterHandlebarsProvider
