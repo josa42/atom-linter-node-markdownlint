@@ -14,6 +14,9 @@
   "dependencies": {
     "markdownlint": "0.0.7"
   },
+  "package-deps": [
+    "linter"
+  ],
   "providedServices": {
     "linter": {
       "versions": {
