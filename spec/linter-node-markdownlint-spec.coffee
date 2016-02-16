@@ -1,3 +1,4 @@
+path = require 'path'
 { resetConfig } = require './test-helper'
 
 MarkdownlitProvider = require '../lib/markdownlint-provider'
@@ -11,7 +12,7 @@ describe "Lint markdown", ->
     it 'should retun 4 errors', ->
 
       waitsForPromise ->
-        atom.workspace.open('./files/bad.md')
+        atom.workspace.open(path.join(__dirname, 'files', 'bad.md'))
           .then (editor) -> MarkdownlitProvider.lint(editor)
           .then (messages) ->
             expect(messages.length).toEqual(4)
