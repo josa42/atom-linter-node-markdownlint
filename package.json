@@ -12,8 +12,10 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
+    "atom-linter": "^5.0.1",
     "atom-package-deps": "^4.0.1",
-    "markdownlint": "^0.1.1"
+    "markdownlint": "^0.1.1",
+    "rc": "^1.1.6"
   },
   "package-deps": [
     "linter"

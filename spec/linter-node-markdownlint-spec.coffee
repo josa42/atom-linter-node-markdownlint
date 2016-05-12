@@ -27,3 +27,16 @@ describe "Lint markdown", ->
 
             expect(messages[3].text).toEqual("MD041 First line in file should be a top level header")
             expect(messages[3].range).toEqual( [[0, 0], [0, 7]])
+  describe "config file .markdownlintrc", ->
+    it "should return 2 errors", ->
+
+      waitsForPromise ->
+        atom.workspace.open(path.join(__dirname, 'project', 'bad.md'))
+          .then (editor) -> MarkdownlitProvider.lint(editor)
+          .then (messages) ->
+            expect(messages.length).toEqual(2)
+            expect(messages[0].text).toEqual("MD010 Hard tabs")
+            expect(messages[0].range).toEqual([[2, 0], [2, 28]])
+
+            expect(messages[1].text).toEqual("MD041 First line in file should be a top level header")
+            expect(messages[1].range).toEqual( [[0, 0], [0, 7]])
