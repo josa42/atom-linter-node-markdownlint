@@ -1,10 +1,6 @@
-language: objective-c
-
 sudo: false
 
-branches:
-  only:
-    - master
+language: objective-c
 
 notifications:
   email:
