@@ -7,3 +7,12 @@
 
 This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides
 an interface to [markdownlint](https://github.com/DavidAnson/markdownlint).
+
+## Configuration
+
+The package reads the configuration from the `.markdownlintrc` file.
+
+For more information see:
+
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli#configuration)
+- [markdownlint](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md)
