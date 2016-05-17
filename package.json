@@ -8,6 +8,17 @@
   "scripts": {
     "lint": "coffeelint lib"
   },
+  "author": {
+    "name": "Josa Gesell",
+    "url": "https://github.com/josa42"
+  },
+  "contributors": [
+    {
+      "name": "Garth Braithwaite",
+      "email": "garthdb@gmail.com",
+      "url": "http://garthdb.com"
+    }
+  ],
   "engines": {
     "atom": ">0.50.0"
   },
