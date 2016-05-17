@@ -1,5 +1,8 @@
 path = require 'path'
 markdownlint = require 'markdownlint'
+{find} = helpers = require 'atom-linter'
+rc = require('rc/lib/utils')
+fs = require('fs')
 
 module.exports =
 
@@ -15,9 +18,18 @@ module.exports =
 
       bufferText = textEditor.getText()
 
+      filePath = textEditor.getPath()
+
       options = {
         "strings": { "string": bufferText }
       }
+
+      configPath = find filePath, '.markdownlintrc'
+
+      if configPath
+        configText = fs.readFileSync(configPath, 'utf8')
+        options['config'] = rc.parse(configText)
+
 
       markdownlint options, (err, result) =>
         unless err
