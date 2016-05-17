@@ -25,11 +25,13 @@ module.exports =
       }
 
       configPath = find filePath, '.markdownlintrc'
+      
+      if not configPath and this.config 'disableIfNoMarkdownlintrc'
+        return resolve []
 
       if configPath
         configText = fs.readFileSync(configPath, 'utf8')
         options['config'] = rc.parse(configText)
-
 
       markdownlint options, (err, result) =>
         unless err
@@ -37,19 +39,21 @@ module.exports =
             .split /\n/
             .map (line) -> line.match /^string: (\d+): (.*)$/
             .filter (match) -> match
-            .map (match) =>
-              return {
-                type: 'Error'
-                text: match[2]
-                filePath: textEditor.getPath()
-                range: @lineRange match[1] - 1, bufferText
-              }
+            .map (match) => {
+              type: 'Error'
+              text: match[2]
+              filePath: textEditor.getPath()
+              range: @lineRange match[1] - 1, bufferText
+            }
 
           resolve(errors)
-
+  
   lineRange: (lineIdx, bufferText) ->
 
     line = bufferText.split(/\n/)[lineIdx] or ''
     pre = String line.match /^\s*/
 
     return [[lineIdx, pre.length], [lineIdx, line.length]]
+
+  config: (key) ->
+    atom.config.get "linter-node-markdownlint.#{key}"

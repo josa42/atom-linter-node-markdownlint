@@ -1,0 +1,7 @@
+{
+  "disableIfNoMarkdownlintrc": {
+    "title": "Disable if no `.markdownlintrc` found in path",
+    "type": "boolean",
+    "default": false
+  }
+}

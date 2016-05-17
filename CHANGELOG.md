@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.0
+* Add Setting: Disable if no `.markdownlintrc` found in path
+
 ## 0.3.0
 * Read configuration from `.markdownlintrc` file.
 
