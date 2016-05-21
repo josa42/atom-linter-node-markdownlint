@@ -1,0 +1,9 @@
+default=true
+no-hard-tabs=false
+MD018=false
+
+[MD003]
+style=atx_closed
+
+[MD007]
+indent=4

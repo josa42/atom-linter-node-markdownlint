@@ -40,3 +40,15 @@ describe "Lint markdown", ->
 
             expect(messages[1].text).toEqual("MD041 First line in file should be a top level header")
             expect(messages[1].range).toEqual( [[0, 0], [0, 7]])
+
+  describe "ini format config file .markdownlintrc", ->
+    it "should return 1 error", ->
+
+      waitsForPromise ->
+        atom.workspace.open(path.join(__dirname, 'project_ini', 'bad.md'))
+          .then (editor) -> MarkdownlitProvider.lint(editor)
+          .then (messages) ->
+            expect(messages.length).toEqual(1)
+
+            expect(messages[0].text).toEqual("MD041 First line in file should be a top level header")
+            expect(messages[0].range).toEqual( [[0, 0], [0, 7]])
