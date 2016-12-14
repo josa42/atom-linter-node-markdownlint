@@ -2,14 +2,15 @@
   "name": "linter-node-markdownlint",
   "main": "./lib/init",
   "version": "0.5.0",
-  "description": "Lint `markdown` on the fly, using handlebars",
+  "description": "Lint `markdown` on the fly, using markdownlint",
   "repository": "https://github.com/josa42/atom-linter-node-markdownlint",
   "license": "MIT",
   "scripts": {
-    "lint": "coffeelint lib"
+    "lint": "eslint ."
   },
   "author": {
     "name": "Josa Gesell",
+    "email": "josa@gesell.me",
     "url": "https://github.com/josa42"
   },
   "contributors": [
@@ -39,6 +40,6 @@
     }
   },
   "devDependencies": {
-    "coffeelint": "^1.15.7"
+    "eslint": "^3.12.1"
   }
 }

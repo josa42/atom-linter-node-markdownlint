@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0
+* Rewrite in JavaScript
+
 ## 0.5.0
 * Add links to linting errors.
 * Add add API blueprint to grammarScopes
