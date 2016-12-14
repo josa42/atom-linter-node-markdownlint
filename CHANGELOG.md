@@ -2,6 +2,7 @@
 
 ## 1.0.0
 * Rewrite in JavaScript
+* Upgrade markdownlint to `0.3.1`
 
 ## 0.5.0
 * Add links to linting errors.
