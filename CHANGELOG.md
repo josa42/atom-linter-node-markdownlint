@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.5.0
+* Add links to linting errors.
+
 ## 0.4.0
 * Add Setting: Disable if no `.markdownlintrc` found in path
 
