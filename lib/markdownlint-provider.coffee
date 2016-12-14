@@ -7,7 +7,11 @@ links = require('./links')
 
 module.exports =
 
-  grammarScopes: ['source.gfm', 'source.pfm']
+  grammarScopes: [
+    'source.gfm',
+    'source.pfm',
+    'text.html.markdown.source.gfm.apib'
+  ]
 
   scope: 'file'
 

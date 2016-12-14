@@ -2,6 +2,7 @@
 
 ## 0.5.0
 * Add links to linting errors.
+* Add add API blueprint to grammarScopes
 
 ## 0.4.0
 * Add Setting: Disable if no `.markdownlintrc` found in path
