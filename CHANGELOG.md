@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+* Upgrade markdownlint to `0.11.0`
+
 ## 1.0.0
 * Rewrite in JavaScript
 * Upgrade markdownlint to `0.3.1`
