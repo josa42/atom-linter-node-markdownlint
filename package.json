@@ -30,7 +30,7 @@
     "rc": "^1.2.8"
   },
   "package-deps": [
-    "linter"
+    "atom-ide-ui"
   ],
   "providedServices": {
     "linter": {
