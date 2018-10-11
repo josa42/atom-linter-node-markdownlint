@@ -1,7 +1,7 @@
 {
   "name": "linter-node-markdownlint",
   "main": "./lib/init",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Lint `markdown` on the fly, using markdownlint",
   "repository": "https://github.com/josa42/atom-linter-node-markdownlint",
   "license": "MIT",
